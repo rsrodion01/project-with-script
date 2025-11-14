@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public int coins = 0;
     public GameObject fireballPrefab;
     public Transform attackPoint;
     private int HP = 10;
@@ -19,5 +20,11 @@ public class Player : MonoBehaviour
         {
             Instantiate(fireballPrefab,attackPoint.position, attackPoint.rotation);
         }
+    }
+    
+    void CollectCoins()
+    {
+        coins++;
+        print("Collected coins:" + coins);
     }
 }
